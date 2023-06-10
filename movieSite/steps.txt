@@ -1,0 +1,31 @@
+create project folder moviesite
+cd moviesite
+mkvirtualenv movie
+pip install django
+django-admin startproject moviesite
+python manage.py startapp movieapp
+
+app setup
+------------
+moviesite:
+  urls ---->
+  urlspattern =['',include('movieapp.urls')]
+  setting.py----?
+  installedapps =['movieapp']
+  dirs =[os.path.join(BASE-DIR,'templates')]
+
+
+create urls.py file inside movieapp
+
+python manage.py migrate
+
+once model created--> python manage.py makemigrations
+                      python manage.py migrate
+
+create super user : python manage.py createsuperuser
+ uname :admin
+ email: saranya@gmail.com
+ pwrd:sara123
+
+to regiter the model in admin.py
+admin.site.register(movie)

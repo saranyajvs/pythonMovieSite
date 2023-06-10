@@ -1,0 +1,10 @@
+<!-- index page Without bootstrap card-->
+{% extends 'base.html'%}
+{% block body %}
+{% for i in movie_list%}
+<!--<a href="movie/{{i.id}}">{{i.name}}</a> <br> &nbsp;&nbsp; &ndash;&gt;{{i.desc}}<br> &nbsp;&nbsp;&ndash;&gt;{{i.year}}-->
+<a href="{% url 'movieapp:showdetails' i.id%}"> {{i.name}}</a><br> &nbsp;&nbsp;{{i.desc}}<br> &nbsp;{{i.year}}
+<!--the above format is >> "url ,namespace(is the name= given url appname:name= x) ,id"-->
+<br>
+{% endfor %}
+{% endblock %}

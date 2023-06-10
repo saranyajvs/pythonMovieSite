@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body%}
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+    <p ><label><H1 style="font-color: Blue">{{movie.name}} </H1></label> </p>
+    {{form.as_p}}
+    <input type="submit">
+</form>
+{% endblock %}
